@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mobile Apps Landing Page</title>
-    <link href="00;60" rel="stylesheet" />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
-      /* --- CSS Styling dimulai di sini --- */
-
-      /* Import Google Fonts (redundant if linked above, but harmless) */
-      @import url("");
-
       /* CSS Variables */
       :root {
-        --primary-color: #ffa500; /* Orange color for highlight */
+        --primary-color: #ffa500;
         --text-color: #ffffff;
-        --dark-blue: #1a202c; /* Example dark blue for background, adjust as needed */
+        --dark-blue: #1a202c;
         --light-gray: #e2e8f0;
-        --button-bg: #4a5568; /* Darker gray for buttons */
+        --button-bg: #4a5568;
         --button-text: #ffffff;
       }
 
-      /* Base Styles */
       body {
         margin: 0;
         font-family: "Open Sans", sans-serif;
         color: var(--text-color);
-        background-color: var(--dark-blue); /* Default background, will be overridden by hero image */
+        background-color: var(--dark-blue);
         overflow-x: hidden;
-        scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        scroll-behavior: smooth;
       }
 
       .container {
@@ -98,11 +99,9 @@
       .hero-section {
         position: relative;
         width: 100%;
-        height: 100vh; /* Full viewport height */
+        height: 100vh;
         display: flex;
         align-items: center;
-        /* Ganti dengan path gambar latar belakang ponsel Anda */
-        /* Saya menggunakan placeholder dari Unsplash sebagai contoh */
         background-image: url("backg.jpg");
         background-size: cover;
         background-position: center;
@@ -116,31 +115,29 @@
         left: 0;
         width: 100%;
         height: 100%;
-        /* Gradient from dark left to transparent right */
         background: linear-gradient(
           to right,
           rgba(0, 0, 0, 0.7) 0%,
           rgba(0, 0, 0, 0.2) 60%,
           rgba(0, 0, 0, 0) 100%
         );
-        /* Adjust gradient to match the image's lighting */
       }
 
       .hero-section .container {
         position: relative;
-        z-index: 10; /* Ensure content is above the overlay */
+        z-index: 10;
       }
 
       .hero-content {
-        max-width: 600px; /* Adjust as needed */
+        max-width: 600px;
         text-align: left;
-        padding-left: 50px; /* Posisikan konten sedikit ke kanan dari kiri */
+        padding-left: 50px;
       }
 
       .hero-content h1 {
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
-        font-size: 80px; /* Adjust font size as needed */
+        font-size: 80px;
         margin-bottom: 10px;
         line-height: 1;
       }
@@ -160,7 +157,7 @@
         font-size: 16px;
         line-height: 1.6;
         margin-bottom: 40px;
-        max-width: 450px; /* Limit description width */
+        max-width: 450px;
       }
 
       .navigation-buttons {
@@ -184,42 +181,56 @@
       }
 
       .btn:hover {
-        background-color: #384252; /* A slightly darker shade for hover */
+        background-color: #384252;
       }
 
       .btn-previous {
-        background-color: var(--primary-color); /* For the previous button, match highlight color */
+        background-color: var(--primary-color);
       }
 
       .btn-previous:hover {
-        background-color: #e69500; /* A slightly darker shade for hover */
+        background-color: #e69500;
       }
 
-      /* Footer Bottom Text */
+      /* Section Styles */
+      section {
+        padding: 100px 0;
+        text-align: center;
+      }
+
+      section h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      section p {
+        color: lightgray;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      #about-us-section {
+        background-color: #2d3748;
+      }
+
+      #services-section {
+        background-color: #4a5568;
+      }
+
+      /* Footer */
       .footer-bottom-text {
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        width: 100%;
-        text-align: right; /* Align text to the right as in the image */
-        padding-right: 50px; /* Add some padding from the right edge */
-        box-sizing: border-box;
+        text-align: center;
+        padding: 30px 20px;
+        background-color: #1a202c;
+        color: rgba(255, 255, 255, 0.7);
         font-size: 14px;
-        color: rgba(255, 255, 255, 0.7); /* Slightly faded white */
-        z-index: 10; /* Ensure it's above the background image */
       }
 
-      .footer-bottom-text .container {
-        display: flex;
-        justify-content: flex-end; /* Align content to the right */
-      }
-
-      .footer-bottom-text p {
-        max-width: 500px; /* Limit width to mimic the image */
-        text-align: left; /* Keep text aligned left within its box */
-      }
-
-      /* --- Responsive adjustments (basic) --- */
+      /* Responsive */
       @media (max-width: 768px) {
         .navbar .container {
           flex-direction: column;
@@ -248,16 +259,6 @@
         .navigation-buttons {
           justify-content: center;
         }
-
-        .footer-bottom-text {
-          text-align: center;
-          padding-right: 20px;
-          padding-left: 20px;
-        }
-
-        .footer-bottom-text .container {
-          justify-content: center;
-        }
       }
 
       @media (max-width: 480px) {
@@ -270,11 +271,11 @@
           font-size: 14px;
         }
       }
-
-      /* --- CSS Styling berakhir di sini --- */
     </style>
   </head>
+
   <body>
+    <!-- Navbar -->
     <header class="navbar">
       <div class="container">
         <div class="logo">
@@ -298,6 +299,7 @@
       </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero-section" id="hero-section">
       <div class="container">
         <div class="hero-content">
@@ -325,37 +327,35 @@
       <div class="hero-image-overlay"></div>
     </section>
 
-    <section
-      id="about-us-section"
-      style="
-        height: 500px;
-        background-color: #2d3748;
-        padding-top: 100px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      "
-    >
+    <!-- About Us -->
+    <section id="about-us-section">
       <div class="container">
-        <h2
-          style="
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-          "
-        >
-          About Us
-        </h2>
-        <p
-          style="
-            color: lightgray;
-            max-width: 600px;
-            margin-top: 20px;
-          "
-        >
+        <h2>About Us</h2>
+        <p>
           Kami adalah tim yang berdedikasi dalam mengembangkan solusi aplikasi
           mobile inovatif. Dengan pengalaman bertahun-tahun, kami siap membantu
           Anda mewujudkan ide-ide digital.
         </p>
-      </div
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services-section">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p>
+          Kami menyediakan layanan lengkap mulai dari perencanaan aplikasi,
+          pengembangan Android & iOS, integrasi API, hingga UI/UX yang menarik
+          dan efisien.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bottom-text">
+      <div class="container">
+        <p>&copy; 2025 AhmadFx Group. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
